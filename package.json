@@ -1,0 +1,55 @@
+{
+  "name": "dsh-reasoning-loop-guard",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DSH plugin: stop DeepSeek thinking-mode repetition loops by dropping reasoning_content from completed turns while preserving the active turn | DSH 插件：剥离已完成轮次的历史思维链，抑制 DeepSeek 思考模式的复读循环",
+  "license": "MIT",
+  "author": "ddddd-ren",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddddd-ren/dsh-reasoning-loop-guard.git"
+  },
+  "homepage": "https://github.com/ddddd-ren/dsh-reasoning-loop-guard#readme",
+  "bugs": {
+    "url": "https://github.com/ddddd-ren/dsh-reasoning-loop-guard/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "deepseek",
+    "reasoning",
+    "thinking",
+    "repetition",
+    "loop",
+    "reasoning_content"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  }
+}

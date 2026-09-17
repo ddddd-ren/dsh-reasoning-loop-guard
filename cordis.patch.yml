@@ -1,0 +1,6 @@
+# dsh-reasoning-loop-guard —— 只挂载宿主半侧：监听 llm/stream 这一条所有适配器
+# 共用的入口，剥离已完成轮次的历史思维链，抑制思考模式的复读循环。
+# 本插件没有浏览器半侧，也不需要设置页。
+- insert:
+    - id: reasoning-loop-guard
+      name: dsh-reasoning-loop-guard
